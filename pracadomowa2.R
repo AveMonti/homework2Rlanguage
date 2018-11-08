@@ -28,8 +28,14 @@ sapply(ds[2:5], sum)
 
 # zad3 Napisz funkcj??, kt??ra dla danego wektora zwr??ci warto??ci powy??ej ??redniej tego wektora.
 
-meanVec <- function(vec) {
-  return(mean(vec))
+meanVec <- function(vector) {
+  y = as.integer(0) 
+  
+  for (i in 1:length(vector)) { 
+    y <- vector[i] + y
+  }
+  
+  y / length(vector)
 }
 
 usedcars <- read.csv("https://raw.githubusercontent.com/stedy/Machine-Learning-with-R-datasets/master/usedcars.csv")
